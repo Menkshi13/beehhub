@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeeHub — Κοινότητα</title>
+  <meta name="description" content="Ερωτήσεις/Απαντήσεις, εμπειρίες, tips και συζήτηση." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-current="community">
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="BeeHub αρχική">
+        <img class="brand__logo" src="assets/logo.jpg" alt="BeeHub λογότυπο" />
+        <span class="brand__name">BeeHub</span>
+      </a>
+
+      <nav class="nav" aria-label="Κύρια πλοήγηση">
+        <a href="index.html" data-nav="home">Αρχική</a>
+        <a href="knowledge.html" data-nav="knowledge">Γνώση</a>
+        <a href="market.html" data-nav="market">Αγγελίες</a>
+        <a href="community.html" data-nav="community">Κοινότητα</a>
+        <a href="contact.html" data-nav="contact">Επικοινωνία</a>
+      </nav>
+
+      <button class="burger" aria-label="Άνοιγμα μενού" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="authbtns" id="authArea">
+        <a class="btn btn--ghost" href="auth.html?mode=login">Είσοδος</a>
+        <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobilemenu" id="mobilemenu">
+    <div class="container mobilemenu__inner">
+      <a href="index.html">Αρχική</a>
+      <a href="knowledge.html">Γνώση</a>
+      <a href="market.html">Αγγελίες</a>
+      <a href="community.html">Κοινότητα</a>
+      <a href="contact.html">Επικοινωνία</a>
+      <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+    </div>
+  </div>
+
+<main class="page">
+  <div class="container">
+    <div class="pagehead">
+      <div>
+        <h1 class="pagetitle">Κοινότητα</h1>
+        <p class="pagesub">Ερωτήσεις/Απαντήσεις, εμπειρίες, tips και συζήτηση.</p>
+      </div>
+    </div>
+
+    <div class="pagegrid">
+      
+    <section class="card">
+      <h2>Κάνε μια ερώτηση</h2>
+      <p class="muted">Demo φόρμα — αποθηκεύει σε localStorage και εμφανίζει στην λίστα.</p>
+      <label class="field">
+        <span>Τίτλος</span>
+        <input id="qTitle" type="text" placeholder="π.χ. Πότε είναι σωστή στιγμή για τροφοδότηση;" />
+        <small class="field__error" id="qTitleErr"></small>
+      </label>
+      <label class="field">
+        <span>Περιγραφή</span>
+        <textarea id="qBody" rows="5" placeholder="Δώσε λίγο context (περιοχή, θερμοκρασίες, δύναμη μελισσιού)..."></textarea>
+        <small class="field__error" id="qBodyErr"></small>
+      </label>
+
+      <div class="rowgap">
+        <button class="btn btn--primary" type="button" id="postQuestion">Δημοσίευση</button>
+        <a class="btn btn--ghost" href="auth.html?mode=login&next=community.html">Σύνδεση</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Πρόσφατες ερωτήσεις (demo)</h2>
+      <div class="miniList" id="qaList">
+        <div class="miniItem"><strong>Βαρρόα: ποια μέθοδος μέτρησης προτείνετε;</strong><span>12 απαντήσεις • 2 ημέρες πριν</span></div>
+        <div class="miniItem"><strong>Μετακίνηση σε θυμάρι: τι να προσέξω;</strong><span>7 απαντήσεις • 5 ημέρες πριν</span></div>
+      </div>
+    </section>
+    
+    </div>
+  </div>
+</main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <strong>BeeHub</strong>
+        <p>Η ψηφιακή κυψέλη των μελισσοκόμων.</p>
+      </div>
+      <div class="footer__links">
+        <a href="terms.html">Όροι</a>
+        <a href="privacy.html">Απόρρητο</a>
+        <a href="contact.html">Επικοινωνία</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

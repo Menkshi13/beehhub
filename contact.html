@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeeHub — Επικοινωνία</title>
+  <meta name="description" content="Στείλε μας μήνυμα ή πες τι θες να δεις στην πλατφόρμα." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-current="contact">
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="BeeHub αρχική">
+        <img class="brand__logo" src="assets/logo.jpg" alt="BeeHub λογότυπο" />
+        <span class="brand__name">BeeHub</span>
+      </a>
+
+      <nav class="nav" aria-label="Κύρια πλοήγηση">
+        <a href="index.html" data-nav="home">Αρχική</a>
+        <a href="knowledge.html" data-nav="knowledge">Γνώση</a>
+        <a href="market.html" data-nav="market">Αγγελίες</a>
+        <a href="community.html" data-nav="community">Κοινότητα</a>
+        <a href="contact.html" data-nav="contact">Επικοινωνία</a>
+      </nav>
+
+      <button class="burger" aria-label="Άνοιγμα μενού" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="authbtns" id="authArea">
+        <a class="btn btn--ghost" href="auth.html?mode=login">Είσοδος</a>
+        <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobilemenu" id="mobilemenu">
+    <div class="container mobilemenu__inner">
+      <a href="index.html">Αρχική</a>
+      <a href="knowledge.html">Γνώση</a>
+      <a href="market.html">Αγγελίες</a>
+      <a href="community.html">Κοινότητα</a>
+      <a href="contact.html">Επικοινωνία</a>
+      <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+    </div>
+  </div>
+
+<main class="page">
+  <div class="container">
+    <div class="pagehead">
+      <div>
+        <h1 class="pagetitle">Επικοινωνία</h1>
+        <p class="pagesub">Στείλε μας μήνυμα ή πες τι θες να δεις στην πλατφόρμα.</p>
+      </div>
+    </div>
+
+    <div class="pagegrid">
+      
+    <section class="card">
+      <h2>Φόρμα επικοινωνίας (demo)</h2>
+      <label class="field">
+        <span>Ονοματεπώνυμο</span>
+        <input id="cName" type="text" placeholder="Το όνομά σου" />
+        <small class="field__error" id="cNameErr"></small>
+      </label>
+      <label class="field">
+        <span>Email</span>
+        <input id="cEmail" type="email" placeholder="name@email.com" />
+        <small class="field__error" id="cEmailErr"></small>
+      </label>
+      <label class="field">
+        <span>Μήνυμα</span>
+        <textarea id="cMsg" rows="5" placeholder="Γράψε μας τι χρειάζεσαι..."></textarea>
+        <small class="field__error" id="cMsgErr"></small>
+      </label>
+      <div class="rowgap">
+        <button class="btn btn--primary" type="button" id="sendContact">Αποστολή</button>
+        <a class="btn btn--ghost" href="mailto:info@beehub.gr">info@beehub.gr</a>
+      </div>
+      <p class="muted">Επόμενο βήμα: σύνδεση με Formspree / backend endpoint.</p>
+    </section>
+
+    <section class="card">
+      <h2>Social / Links</h2>
+      <ul class="bullets">
+        <li>Instagram (coming soon)</li>
+        <li>Facebook group (coming soon)</li>
+        <li>Newsletter (coming soon)</li>
+      </ul>
+    </section>
+    
+    </div>
+  </div>
+</main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <strong>BeeHub</strong>
+        <p>Η ψηφιακή κυψέλη των μελισσοκόμων.</p>
+      </div>
+      <div class="footer__links">
+        <a href="terms.html">Όροι</a>
+        <a href="privacy.html">Απόρρητο</a>
+        <a href="contact.html">Επικοινωνία</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

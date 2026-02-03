@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeeHub — Dashboard</title>
+  <meta name="description" content="BeeHub dashboard." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-current="dashboard" data-protected="true">
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="BeeHub αρχική">
+        <img class="brand__logo" src="assets/logo.jpg" alt="BeeHub λογότυπο" />
+        <span class="brand__name">BeeHub</span>
+      </a>
+
+      <nav class="nav" aria-label="Κύρια πλοήγηση">
+        <a href="index.html" data-nav="home">Αρχική</a>
+        <a href="knowledge.html" data-nav="knowledge">Γνώση</a>
+        <a href="market.html" data-nav="market">Αγγελίες</a>
+        <a href="community.html" data-nav="community">Κοινότητα</a>
+        <a href="contact.html" data-nav="contact">Επικοινωνία</a>
+      </nav>
+
+      <button class="burger" aria-label="Άνοιγμα μενού" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="authbtns" id="authArea">
+        <a class="btn btn--ghost" href="auth.html?mode=login">Είσοδος</a>
+        <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobilemenu" id="mobilemenu">
+    <div class="container mobilemenu__inner">
+      <a href="index.html">Αρχική</a>
+      <a href="knowledge.html">Γνώση</a>
+      <a href="market.html">Αγγελίες</a>
+      <a href="community.html">Κοινότητα</a>
+      <a href="contact.html">Επικοινωνία</a>
+      <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+    </div>
+  </div>
+
+<main class="page">
+  <div class="container">
+    <div class="pagehead">
+      <div>
+        <h1 class="pagetitle">Dashboard</h1>
+        <p class="pagesub">Καλώς ήρθες, <strong id="dashName">—</strong>. Από εδώ διαχειρίζεσαι το προφίλ και τις ενέργειές σου.</p>
+      </div>
+      <div class="pageactions">
+        <a class="btn btn--ghost" href="market.html">Αναζήτηση αγγελιών</a>
+        <a class="btn btn--primary" href="community.html">Κάνε μια ερώτηση</a>
+      </div>
+    </div>
+
+    <div class="dashgrid">
+      <section class="card">
+        <h2>Το προφίλ σου</h2>
+        <p class="muted">Στοιχεία λογαριασμού (demo storage στο browser).</p>
+
+        <div class="kv">
+          <div><span class="k">Όνομα</span><strong class="v" id="profileName">—</strong></div>
+          <div><span class="k">Email</span><strong class="v" id="profileEmail">—</strong></div>
+        </div>
+
+        <div class="rowgap">
+          <button class="btn btn--ghost" type="button" id="logoutBtn">Αποσύνδεση</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Γρήγορες ενέργειες</h2>
+        <p class="muted">Έτοιμα UI blocks για να “γεμίσει” σαν κανονική πλατφόρμα.</p>
+
+        <div class="actionsgrid">
+          <a class="actioncard" href="market.html">
+            <strong>Δημοσίευση αγγελίας</strong>
+            <span>Πώληση / ζήτηση με φόρμα & κανόνες</span>
+          </a>
+          <a class="actioncard" href="knowledge.html">
+            <strong>Δημιουργία άρθρου</strong>
+            <span>Editor + tags + draft</span>
+          </a>
+          <a class="actioncard" href="community.html">
+            <strong>Νέα ερώτηση</strong>
+            <span>Q&A με upvotes</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Πρόσφατη δραστηριότητα</h2>
+        <p class="muted">Demo λίστα (αργότερα θα έρχεται από backend).</p>
+
+        <ul class="activity">
+          <li><span class="dot dot--gold"></span> Έκανες εγγραφή / είσοδο</li>
+          <li><span class="dot dot--muted"></span> Αποθήκευσες 0 αγγελίες</li>
+          <li><span class="dot dot--muted"></span> Έκανες 0 ερωτήσεις</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <strong>BeeHub</strong>
+        <p>Η ψηφιακή κυψέλη των μελισσοκόμων.</p>
+      </div>
+      <div class="footer__links">
+        <a href="terms.html">Όροι</a>
+        <a href="privacy.html">Απόρρητο</a>
+        <a href="contact.html">Επικοινωνία</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

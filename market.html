@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeeHub — Αγγελίες</title>
+  <meta name="description" content="Αναζήτηση, φίλτρα και δημοσιεύσεις με κανόνες." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-current="market">
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="BeeHub αρχική">
+        <img class="brand__logo" src="assets/logo.jpg" alt="BeeHub λογότυπο" />
+        <span class="brand__name">BeeHub</span>
+      </a>
+
+      <nav class="nav" aria-label="Κύρια πλοήγηση">
+        <a href="index.html" data-nav="home">Αρχική</a>
+        <a href="knowledge.html" data-nav="knowledge">Γνώση</a>
+        <a href="market.html" data-nav="market">Αγγελίες</a>
+        <a href="community.html" data-nav="community">Κοινότητα</a>
+        <a href="contact.html" data-nav="contact">Επικοινωνία</a>
+      </nav>
+
+      <button class="burger" aria-label="Άνοιγμα μενού" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="authbtns" id="authArea">
+        <a class="btn btn--ghost" href="auth.html?mode=login">Είσοδος</a>
+        <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobilemenu" id="mobilemenu">
+    <div class="container mobilemenu__inner">
+      <a href="index.html">Αρχική</a>
+      <a href="knowledge.html">Γνώση</a>
+      <a href="market.html">Αγγελίες</a>
+      <a href="community.html">Κοινότητα</a>
+      <a href="contact.html">Επικοινωνία</a>
+      <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+    </div>
+  </div>
+
+<main class="page">
+  <div class="container">
+    <div class="pagehead">
+      <div>
+        <h1 class="pagetitle">Αγγελίες Μελισσοκομίας</h1>
+        <p class="pagesub">Αναζήτηση, φίλτρα και δημοσιεύσεις με κανόνες.</p>
+      </div>
+    </div>
+
+    <div class="pagegrid">
+      
+    <section class="card">
+      <h2>Φίλτρα (demo)</h2>
+      <div class="filters">
+        <label class="field">
+          <span>Λέξεις-κλειδιά</span>
+          <input type="text" placeholder="π.χ. παραφυάδες, μελιτοεξαγωγέας" />
+        </label>
+        <label class="field">
+          <span>Περιοχή</span>
+          <input type="text" placeholder="π.χ. Αττική" />
+        </label>
+        <div class="rowgap">
+          <button class="btn btn--primary" type="button">Αναζήτηση</button>
+          <a class="btn btn--ghost" href="auth.html?mode=register">Δημοσίευση αγγελίας</a>
+        </div>
+        <p class="muted">Επόμενο βήμα: πραγματική λίστα + CRUD από dashboard.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Αγγελίες (demo)</h2>
+      <div class="miniList">
+        <div class="miniItem"><strong>Παραφυάδες 5 πλαισίων</strong><span>📍 Αττική • Πώληση</span></div>
+        <div class="miniItem"><strong>Μελιτοεξαγωγέας 4πλός</strong><span>📍 Θεσσαλονίκη • Ζήτηση</span></div>
+        <div class="miniItem"><strong>Βασίλισσες επιλεγμένης γενετικής</strong><span>📍 Κρήτη • Πώληση</span></div>
+      </div>
+    </section>
+    
+    </div>
+  </div>
+</main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <strong>BeeHub</strong>
+        <p>Η ψηφιακή κυψέλη των μελισσοκόμων.</p>
+      </div>
+      <div class="footer__links">
+        <a href="terms.html">Όροι</a>
+        <a href="privacy.html">Απόρρητο</a>
+        <a href="contact.html">Επικοινωνία</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

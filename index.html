@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeeHub — Η ψηφιακή κυψέλη των μελισσοκόμων</title>
+  <meta name="description" content="Γνώση, εμπειρία, αγγελίες και κοινότητα — όλα σε ένα μέρος, για κάθε μελισσοκόμο." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body data-current="home">
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="BeeHub αρχική">
+        <img class="brand__logo" src="assets/logo.jpg" alt="BeeHub λογότυπο" />
+        <span class="brand__name">BeeHub</span>
+      </a>
+
+      <nav class="nav" aria-label="Κύρια πλοήγηση">
+        <a href="index.html" data-nav="home">Αρχική</a>
+        <a href="knowledge.html" data-nav="knowledge">Γνώση</a>
+        <a href="market.html" data-nav="market">Αγγελίες</a>
+        <a href="community.html" data-nav="community">Κοινότητα</a>
+        <a href="contact.html" data-nav="contact">Επικοινωνία</a>
+      </nav>
+
+      <button class="burger" aria-label="Άνοιγμα μενού" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="authbtns" id="authArea">
+        <a class="btn btn--ghost" href="auth.html?mode=login">Είσοδος</a>
+        <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobilemenu" id="mobilemenu">
+    <div class="container mobilemenu__inner">
+      <a href="index.html" data-nav="home">Αρχική</a>
+      <a href="knowledge.html" data-nav="knowledge">Γνώση</a>
+      <a href="market.html" data-nav="market">Αγγελίες</a>
+      <a href="community.html" data-nav="community">Κοινότητα</a>
+      <a href="contact.html" data-nav="contact">Επικοινωνία</a>
+      <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__text">
+          <p class="badge">Η ψηφιακή κυψέλη των μελισσοκόμων</p>
+          <h1>BeeHub</h1>
+          <p class="lead">
+            Γνώση, εμπειρία, αγγελίες και κοινότητα — όλα σε ένα μέρος, για κάθε μελισσοκόμο.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="community.html">Μπες στην κοινότητα</a>
+            <a class="btn btn--ghost" href="#features">Δες τι θα βρεις</a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="meta"><strong>Οδηγοί</strong><span>ανά εποχή</span></div>
+            <div class="meta"><strong>Αγγελίες</strong><span>μελισσοκομίας</span></div>
+            <div class="meta"><strong>Κοινότητα</strong><span>ερωτήσεις/απαντήσεις</span></div>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="honeycomb" aria-hidden="true"></div>
+
+          <div class="card visualcard">
+            <div class="visualcard__top">
+              <span class="dot"></span>
+              <p class="visualcard__kicker">BeeHub platform</p>
+            </div>
+
+            <h2>Όλα σε μία “κυψέλη”</h2>
+            <p>
+              Οδηγοί, αγγελίες, κοινότητα και εποχικότητα — οργανωμένα για να βρίσκεις γρήγορα αυτό που χρειάζεσαι.
+            </p>
+
+            <div class="visualcard__stats">
+              <div class="stat"><strong>Οδηγοί</strong><span>ανά εποχή</span></div>
+              <div class="stat"><strong>Αγγελίες</strong><span>με κανόνες</span></div>
+              <div class="stat"><strong>Q&A</strong><span>κοινότητα</span></div>
+            </div>
+
+            <div class="visualcard__cta">
+              <a class="btn btn--primary" href="auth.html?mode=register">Γίνε μέλος</a>
+              <a class="btn btn--ghost" href="knowledge.html">Δες οδηγούς</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section__title">Τι θα βρεις στο BeeHub</h2>
+        <p class="section__subtitle">Κοινότητα και portal — μαζί, σωστά οργανωμένα.</p>
+
+        <div class="grid">
+          <article class="feature">
+            <h3>🐝 Γνώση & Οδηγοί</h3>
+            <p>Άρθρα και βήματα για κάθε εποχή: βασιλοτροφία, ασθένειες, τρύγος, ξεχειμώνιασμα.</p>
+          </article>
+
+          <article class="feature">
+            <h3>🐝 Αγγελίες Μελισσοκομίας</h3>
+            <p>Μελίσσια, βασίλισσες, εξοπλισμός — αγοραπωλησίες με ξεκάθαρους κανόνες.</p>
+          </article>
+
+          <article class="feature">
+            <h3>🐝 Κοινότητα</h3>
+            <p>Ερωτήσεις, εμπειρίες και λύσεις από μελισσοκόμους σε πραγματικές συνθήκες.</p>
+          </article>
+
+          <article class="feature">
+            <h3>🐝 Ανθοφορίες & Εποχικότητα</h3>
+            <p>Τι “δουλεύει” πότε και γιατί — για καλύτερο προγραμματισμό και μετακινήσεις.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest -->
+    <section class="section">
+      <div class="container">
+        <div class="sectionhead">
+          <div>
+            <h2 class="section__title">Τελευταία άρθρα</h2>
+            <p class="section__subtitle">Γρήγορες, πρακτικές πληροφορίες για το μελισσοκομείο.</p>
+          </div>
+          <a class="btn btn--ghost" href="knowledge.html">Όλα τα άρθρα</a>
+        </div>
+
+        <div class="cards">
+          <article class="postcard">
+            <p class="postcard__tag">Οδηγός</p>
+            <h3>Ξεχειμώνιασμα: 7 έλεγχοι πριν πέσουν οι θερμοκρασίες</h3>
+            <p>Checklist για τροφές, πληθυσμό, υγρασία και προστασία από ανέμους.</p>
+            <div class="postcard__meta"><span>⏱ 6′</span><span>•</span><span>Ενημερώθηκε πρόσφατα</span></div>
+          </article>
+
+          <article class="postcard">
+            <p class="postcard__tag">Υγεία</p>
+            <h3>Βαρρόα: πότε μετράμε σωστά και τι σημαίνουν τα νούμερα</h3>
+            <p>Πρακτική προσέγγιση μέτρησης και πότε χρειάζεται παρέμβαση.</p>
+            <div class="postcard__meta"><span>⏱ 8′</span><span>•</span><span>Βήμα-βήμα</span></div>
+          </article>
+
+          <article class="postcard">
+            <p class="postcard__tag">Εποχικότητα</p>
+            <h3>Θυμάρι, πεύκο, έλατο: πώς διαλέγω στόχο ανά περίοδο</h3>
+            <p>Πλεονεκτήματα/ρίσκα και τι να κοιτάς πριν τη μετακίνηση.</p>
+            <div class="postcard__meta"><span>⏱ 7′</span><span>•</span><span>Στρατηγική</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hot Listings -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="sectionhead">
+          <div>
+            <h2 class="section__title">Hot αγγελίες</h2>
+            <p class="section__subtitle">Ενδεικτικές αγγελίες (demo) — με εγγραφή ξεκλειδώνουν όλες οι λειτουργίες.</p>
+          </div>
+          <a class="btn btn--ghost" href="market.html">Όλες οι αγγελίες</a>
+        </div>
+
+        <div class="cards">
+          <article class="listcard">
+            <div class="listcard__top">
+              <p class="listcard__badge">Πώληση</p>
+              <p class="listcard__price">€ —</p>
+            </div>
+            <h3>Παραφυάδες 5 πλαισίων (Άνοιξη)</h3>
+            <p>Υγιείς, σφραγισμένος γόνος, κατάλληλες για ανάπτυξη.</p>
+            <div class="listcard__meta"><span>📍 Αττική</span><span>•</span><span>Σήμερα</span></div>
+          </article>
+
+          <article class="listcard">
+            <div class="listcard__top">
+              <p class="listcard__badge">Ζήτηση</p>
+              <p class="listcard__price">€ —</p>
+            </div>
+            <h3>Μεταχειρισμένος μελιτοεξαγωγέας 4πλός</h3>
+            <p>Αναζήτηση σε καλή κατάσταση, ιδανικά ανοξείδωτος.</p>
+            <div class="listcard__meta"><span>📍 Θεσσαλονίκη</span><span>•</span><span>Χθες</span></div>
+          </article>
+
+          <article class="listcard">
+            <div class="listcard__top">
+              <p class="listcard__badge">Πώληση</p>
+              <p class="listcard__price">€ —</p>
+            </div>
+            <h3>Βασίλισσες (επιλεγμένη γενετική)</h3>
+            <p>Καλή γονιμότητα, ήπια συμπεριφορά, προσαρμοσμένες συνθήκες.</p>
+            <div class="listcard__meta"><span>📍 Κρήτη</span><span>•</span><span>Αυτή την εβδομάδα</span></div>
+          </article>
+        </div>
+
+        <div class="note">
+          <strong>Θες να ανεβάζεις αγγελίες;</strong>
+          <span>Με την εγγραφή θα έχεις dashboard, προφίλ και εργαλεία δημοσίευσης.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audience -->
+    <section class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Για ποιους είναι</h2>
+        <div class="pillrow">
+          <span class="pill">Νέους μελισσοκόμους</span>
+          <span class="pill">Ερασιτέχνες</span>
+          <span class="pill">Επαγγελματίες</span>
+          <span class="pill">Όσους θέλουν πρακτική γνώση</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="container cta__inner">
+        <div>
+          <h2>Η μελισσοκομία αλλάζει.</h2>
+          <p>Ήρθε η ώρα να αλλάξει και ο τρόπος που επικοινωνούμε.</p>
+        </div>
+        <a class="btn btn--primary btn--big" href="auth.html?mode=register">Γίνε μέλος στο BeeHub</a>
+      </div>
+      <p class="cta__note">*Demo auth: κρατάει session στον browser.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+          <strong>BeeHub</strong>
+          <p>Η ψηφιακή κυψέλη των μελισσοκόμων.</p>
+        </div>
+        <div class="footer__links">
+          <a href="terms.html">Όροι</a>
+          <a href="privacy.html">Απόρρητο</a>
+          <a href="contact.html" data-nav="contact">Επικοινωνία</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

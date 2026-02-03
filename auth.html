@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body data-current="auth">
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="BeeHub αρχική">
+        <img class="brand__logo" src="assets/logo.jpg" alt="BeeHub λογότυπο" />
+        <span class="brand__name">BeeHub</span>
+      </a>
+
+      <nav class="nav" aria-label="Κύρια πλοήγηση">
+        <a href="index.html" data-nav="home">Αρχική</a>
+        <a href="knowledge.html" data-nav="knowledge">Γνώση</a>
+        <a href="market.html" data-nav="market">Αγγελίες</a>
+        <a href="community.html" data-nav="community">Κοινότητα</a>
+        <a href="contact.html" data-nav="contact">Επικοινωνία</a>
+      </nav>
+
+      <button class="burger" aria-label="Άνοιγμα μενού" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="authbtns" id="authArea">
+        <a class="btn btn--ghost" href="auth.html?mode=login">Είσοδος</a>
+        <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobilemenu" id="mobilemenu">
+    <div class="container mobilemenu__inner">
+      <a href="index.html">Αρχική</a>
+      <a href="knowledge.html">Γνώση</a>
+      <a href="market.html">Αγγελίες</a>
+      <a href="community.html">Κοινότητα</a>
+      <a href="contact.html">Επικοινωνία</a>
+      <a class="btn btn--primary" href="auth.html?mode=register">Εγγραφή</a>
+    </div>
+  </div>
+
+<main class="page page--auth">
+  <div class="container">
+    <div class="auth-shell">
+      <div class="modal__panel authpanel" role="main" aria-label="Λογαριασμός BeeHub">
+        <div class="modal__header">
+          <div class="modal__title">
+            <strong>BeeHub</strong>
+            <span>Λογαριασμός</span>
+          </div>
+
+          <a class="iconbtn" id="closeAuth" href="index.html" aria-label="Επιστροφή στην αρχική">←</a>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Auth tabs">
+          <button class="tab is-active" id="tabLogin" role="tab" aria-selected="true">Είσοδος</button>
+          <button class="tab" id="tabRegister" role="tab" aria-selected="false">Εγγραφή</button>
+        </div>
+
+        <!-- Login -->
+        <form class="form is-active" id="formLogin" novalidate>
+          <div class="form__alert" id="loginAlert" aria-live="polite"></div>
+
+          <label class="field">
+            <span>Email</span>
+            <input id="loginEmail" name="email" type="email" placeholder="name@email.com" autocomplete="email" required />
+            <small class="field__error" id="loginEmailErr"></small>
+          </label>
+
+          <label class="field">
+            <span>Κωδικός</span>
+
+            <div class="pw">
+              <input id="loginPassword" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required />
+              <button class="pw__btn" type="button" data-toggle-pw="loginPassword" aria-label="Εμφάνιση κωδικού">👁</button>
+            </div>
+
+            <small class="field__error" id="loginPasswordErr"></small>
+          </label>
+
+          <div class="form__row form__row--split">
+  <label class="check check--compact">
+    <input type="checkbox" id="loginRemember" checked />
+    <span>Μείνε συνδεδεμένος</span>
+  </label>
+
+  <button class="linkbtn" type="button" id="goReset">Ξέχασες κωδικό;</button>
+</div>
+          <button class="btn btn--primary btn--full" type="submit">Είσοδος</button>
+
+          <p class="form__hint">
+            Δεν έχεις λογαριασμό;
+            <button class="linkbtn" type="button" id="goRegister">Κάνε εγγραφή</button>
+          </p>
+        </form>
+
+        <!-- Register -->
+        <form class="form" id="formRegister" novalidate>
+          <div class="form__alert" id="registerAlert" aria-live="polite"></div>
+
+          <label class="field">
+            <span>Όνομα</span>
+            <input id="regName" name="name" type="text" placeholder="Το όνομά σου" autocomplete="name" required />
+            <small class="field__error" id="regNameErr"></small>
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input id="regEmail" name="email" type="email" placeholder="name@email.com" autocomplete="email" required />
+            <small class="field__error" id="regEmailErr"></small>
+          </label>
+
+          <label class="field">
+            <span>Κωδικός</span>
+
+            <div class="pw">
+              <input id="regPassword" name="password" type="password" placeholder="8+ χαρακτήρες" autocomplete="new-password" required />
+              <button class="pw__btn" type="button" data-toggle-pw="regPassword" aria-label="Εμφάνιση κωδικού">👁</button>
+            </div>
+
+            <div class="pw-meter" id="pwMeter" data-level="empty" aria-live="polite">
+              <div class="pw-meter__track"><div class="pw-meter__bar" id="pwMeterBar"></div></div>
+              <div class="pw-meter__meta"><span>Ισχύς κωδικού</span><strong id="pwStrengthLabel">—</strong></div>
+            </div>
+
+            <ul class="pw-rules" aria-label="Απαιτήσεις κωδικού">
+              <li id="ruleLen">8+ χαρακτήρες</li>
+              <li id="ruleUpper">1 κεφαλαίο</li>
+              <li id="ruleLower">1 μικρό</li>
+              <li id="ruleNumber">1 αριθμός</li>
+              <li id="ruleSymbol">1 σύμβολο</li>
+            </ul>
+
+            <small class="field__error" id="regPasswordErr"></small>
+          </label>
+
+          <label class="field">
+            <span>Επιβεβαίωση κωδικού</span>
+            <div class="pw">
+              <input id="regPasswordConfirm" name="passwordConfirm" type="password" placeholder="Ξαναγράψε τον κωδικό" autocomplete="new-password" minlength="8" required />
+              <button class="pw__btn" type="button" data-toggle-pw="regPasswordConfirm" aria-label="Εμφάνιση κωδικού">👁</button>
+            </div>
+            <small class="field__error" id="regPasswordConfirmErr"></small>
+          </label>
+
+          <label class="check">
+            <input id="regTerms" type="checkbox" />
+            <span>
+              Αποδέχομαι τους <a href="terms.html" class="inlineLink">Όρους Χρήσης</a> και την
+              <a href="privacy.html" class="inlineLink">Πολιτική Απορρήτου</a>.
+            </span>
+          </label>
+          <small class="field__error" id="regTermsErr"></small>
+          <small class="form__hint" id="regTermsHint">Αποδέξου τους όρους για να ενεργοποιηθεί το κουμπί.</small>
+
+          <button class="btn btn--primary btn--full" id="regSubmit" type="submit" disabled aria-disabled="true">
+            Δημιουργία λογαριασμού
+          </button>
+
+          <p class="form__hint">
+            Έχεις ήδη λογαριασμό;
+            <button class="linkbtn" type="button" id="goLogin">Κάνε είσοδο</button>
+          </p>
+        </form>
+
+        <!-- Reset Password -->
+        <form class="form" id="formReset" novalidate>
+          <div class="form__alert" id="resetAlert" aria-live="polite"></div>
+
+          <label class="field">
+            <span>Email</span>
+            <input id="resetEmail" name="email" type="email" placeholder="name@email.com" autocomplete="email" required />
+            <small class="field__error" id="resetEmailErr"></small>
+          </label>
+
+          <button class="btn btn--primary btn--full" type="submit">Αποστολή συνδέσμου επαναφοράς</button>
+
+          <p class="form__hint">
+            Θυμήθηκες τον κωδικό;
+            <button class="linkbtn" type="button" id="backToLogin">Επιστροφή στην είσοδο</button>
+          </p>
+
+          <p class="modal__note">*Demo: δεν στέλνει email — δείχνει flow.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <strong>BeeHub</strong>
+        <p>Η ψηφιακή κυψέλη των μελισσοκόμων.</p>
+      </div>
+      <div class="footer__links">
+        <a href="terms.html">Όροι</a>
+        <a href="privacy.html">Απόρρητο</a>
+        <a href="contact.html">Επικοινωνία</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
