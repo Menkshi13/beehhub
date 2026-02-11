@@ -700,6 +700,63 @@ h1{
   color: var(--muted);
   font-size: .9rem;
 }
+
+/* Legal modal (Terms/Privacy) */
+.modal__panel--legal{
+  width: min(820px, 94%);
+  margin: 6vh auto 0;
+  padding: 16px 16px 14px;
+}
+
+.legal__meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  margin: -4px 0 10px;
+}
+
+.legal__meta .btn{
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.legal__body{
+  height: min(62vh, 560px);
+  overflow:auto;
+  border-radius: 16px;
+  border: 1px solid rgba(242,244,248,.08);
+  background: rgba(255,255,255,.02);
+  padding: 14px;
+}
+
+.legal__content h1,
+.legal__content h2,
+.legal__content h3{
+  margin: 14px 0 8px;
+}
+
+.legal__content p{
+  color: rgba(255,255,255,.82);
+  margin: 0 0 10px;
+}
+
+.legal__content .muted{
+  color: var(--muted);
+}
+
+.legal__actions{
+  display:flex;
+  justify-content:flex-end;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+@media (max-width: 520px){
+  .legal__meta{ flex-direction: column; align-items:flex-start; }
+  .legal__actions{ flex-direction: column; }
+  .legal__actions .btn{ width:100%; }
+}
 /* Make header auth buttons brighter */
 .authbtns .btn{
   border-color: rgba(242,244,248,.16);
@@ -1276,3 +1333,4 @@ h1{
   font-size: .88rem;
   color: rgba(242,244,248,.72);
 }
+.tabs { position: relative; z-index: 5; }
