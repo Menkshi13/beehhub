@@ -59,8 +59,8 @@
         </div>
 
         <div class="tabs" role="tablist" aria-label="Auth tabs">
-          <button class="tab is-active" id="tabLogin" role="tab" aria-selected="true">Είσοδος</button>
-          <button class="tab" id="tabRegister" role="tab" aria-selected="false">Εγγραφή</button>
+          <button type="button" class="tab is-active" id="tabLogin" role="tab" aria-selected="true">Είσοδος</button>
+<button type="button" class="tab" id="tabRegister" role="tab" aria-selected="false">Εγγραφή</button>
         </div>
 
         <!-- Login -->
@@ -85,13 +85,14 @@
           </label>
 
           <div class="form__row form__row--split">
-  <label class="check check--compact">
-    <input type="checkbox" id="loginRemember" checked />
-    <span>Μείνε συνδεδεμένος</span>
-  </label>
+            <label class="check check--compact">
+              <input type="checkbox" id="loginRemember" checked />
+              <span>Μείνε συνδεδεμένος</span>
+            </label>
 
-  <button class="linkbtn" type="button" id="goReset">Ξέχασες κωδικό;</button>
-</div>
+            <button class="linkbtn" type="button" id="goReset">Ξέχασες κωδικό;</button>
+          </div>
+
           <button class="btn btn--primary btn--full" type="submit">Είσοδος</button>
 
           <p class="form__hint">
@@ -152,8 +153,8 @@
           <label class="check">
             <input id="regTerms" type="checkbox" />
             <span>
-              Αποδέχομαι τους <a href="terms.html" class="inlineLink">Όρους Χρήσης</a> και την
-              <a href="privacy.html" class="inlineLink">Πολιτική Απορρήτου</a>.
+              Αποδέχομαι τους <a href="terms.html" class="inlineLink" data-legal="terms">Όρους Χρήσης</a> και την
+              <a href="privacy.html" class="inlineLink" data-legal="privacy">Πολιτική Απορρήτου</a>.
             </span>
           </label>
           <small class="field__error" id="regTermsErr"></small>
@@ -207,6 +208,35 @@
     </div>
   </footer>
 
+<!-- Terms/Privacy Modal -->
+<div class="modal" id="legalModal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Νομικά κείμενα">
+  <div class="modal__backdrop" data-legal-close="true"></div>
+
+  <div class="modal__panel modal__panel--legal" role="document">
+    <div class="modal__header">
+      <div class="modal__title">
+        <strong id="legalTitle">—</strong>
+        <span id="legalSub">Διάβασε και αποδέξου για να συνεχίσεις</span>
+      </div>
+
+      <button class="iconbtn" type="button" id="closeLegal" aria-label="Κλείσιμο">✕</button>
+    </div>
+
+    <div class="legal__meta">
+      <p class="muted" id="legalHint">Κάνε scroll μέχρι κάτω για να ενεργοποιηθεί η αποδοχή.</p>
+      <a class="btn btn--ghost" id="legalOpenPage" href="#" target="_blank" rel="noopener">Άνοιγμα σε νέα καρτέλα</a>
+    </div>
+
+    <div class="legal__body" id="legalBody" tabindex="0" aria-label="Κείμενο όρων/απορρήτου">
+      <div class="legal__content" id="legalContent"></div>
+    </div>
+
+    <div class="legal__actions">
+      <button class="btn btn--ghost" type="button" id="legalDecline">Ακύρωση</button>
+      <button class="btn btn--primary" type="button" id="legalAccept" disabled aria-disabled="true">Αποδέχομαι</button>
+    </div>
+  </div>
+</div>
 
 <script type="module" src="./authPageSupabase.js"></script>
 </body>
